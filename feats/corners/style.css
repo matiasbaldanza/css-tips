@@ -12,43 +12,94 @@ div {
 
 }
 
+/* Crosshair corners for divs
+
+  Usage: <div class="crosshair-box">...</div>
+  Modifiers: top-left, top-right, bottom-left, bottom-right
+
+  TODO: add support for adding more than one corner modifier at a time
+  TODO: add support for opacity, offset, style
+*/
+
 .crosshair-box {
   position: relative;
+
+  --crosshair-size: 2rem;
+  --crosshair-color: black;
+  --crosshair-width: 1px;
+  /* --crosshair-style: solid; */
+  /* --crosshair-opacity: 1; */
+  /* --crosshair-offset: 0; */
 
   &::before,
   &::after {
     content: '';
     position: absolute;
-    background-color: black;
+    background-color: var(--crosshair-color);
   }
-
+  /* vertical line ::before*/
   &::before {
-    /* vertical line */
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 2rem;
+    width: var(--crosshair-width);
+    height: var(--crosshair-size);
     translate: 0 -50%;
   }
+
+  /* horizontal line ::after */
+  &::after {
+    width: var(--crosshair-size);
+    height: var(--crosshair-width);
+    translate: -50% 0;
+  }
+
+  /* position corners using modifiers */
+
+  /* top-left */
+  &.top-left::before {
+    top: 0;
+    left: 0;
+  }
+
+  &.top-left::after {
+    top: 0;
+    left: 0;
+  }
+
+  /* top-right */
+  &.top-right::before {
+    top: 0;
+    right: 0;
+  }
+
+  &.top-right::after {
+    top: 0;
+    right: 0;
+    translate: 50% 0;
+  }
+
+  /* bottom-left */
+  &.bottom-left::before {
+    bottom: 0;
+    left: 0;
+    translate: 0 50%;
+  }
+
+  &.bottom-left::after {
+    bottom: 0;
+    left: 0;
+    translate: -50% 0;
+  }
+
+  /* bottom-right */
+  &.bottom-right::before {
+    bottom: 0;
+    right: 0;
+    translate: 50% 50%;
+  }
+
+  &.bottom-right::after {
+    bottom: 0;
+    right: 0;
+    translate: 50% 0;
+  }
 }
-
-.crosshair-box::before {
-  /* vertical line */
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 2rem;
-  translate: 0 -50%;
-}
-
-.crosshair-box::after {
-  /* horizontal line */
-  top: 0;
-  left: 0;
-  width: 2rem;
-  height: 1px;
-  translate: -50% 0;
-}
-
-
 
