@@ -1,0 +1,11 @@
+button {
+  background: #007bff;
+
+  &:hover {
+    background: color-mix(in srgb, #007bff, black 25%);
+  }
+
+  &:disabled {
+    background: color-mix(in srgb, #007bff, white 60%);
+  }
+}
