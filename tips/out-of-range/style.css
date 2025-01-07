@@ -1,0 +1,32 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+input {
+  border-radius: 0.5rem;
+  border: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  color: #0f0f0f;
+  letter-spacing: 0.1rem;
+  outline: 3px solid blue;
+}
+
+input::placeholder {
+  color: gray;
+  font-size: 0.8rem;
+  letter-spacing: 0;
+}
+
+input:out-of-range {
+  outline: 3px solid red;
+  color: red;
+  background-color: #FFecec;
+}
+
+input:in-range:not(:placeholder-shown) {
+  outline: 3px solid green;
+  color: green;
+  background-color: #e8f8e8;
+}
