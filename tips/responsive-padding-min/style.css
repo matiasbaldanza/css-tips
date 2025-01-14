@@ -1,0 +1,35 @@
+body {
+
+}
+
+@media(max-width: 600px) {
+  main {
+    justify-content: start;
+  }
+}
+
+main {
+  max-width: 600px;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-wrap: balance;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-elevation-medium);
+  /* padding: 4em; */
+  padding: min(4em, 12%);
+  margin: min(2em, 4%);
+}
+
+/* @media(max-width: 600px) {
+  .container {
+    padding: 1.5em;
+  }
+} */
