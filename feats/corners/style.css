@@ -9,7 +9,7 @@ div {
   aspect-ratio: 3 / 1;
   padding: 1rem;
   box-shadow: var(--shadow-elevation-low);
-
+  /* border-radius: 2rem; */
 }
 
 /* Crosshair corners for divs
