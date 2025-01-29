@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  main {
+    min-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 150px;
+  }
+
+  .pill {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 9999px;
+    background-color: #1a1a1a;
+    border: 0.75rem solid #444;
+    position: relative;
+    width: min-content;
+  }
+
+  .pill img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -10%;
+    box-sizing: border-box;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-child(1) {
+      z-index: 3;
+    }
+
+    &:nth-child(2) {
+      z-index: 2;
+    }
+
+    &:nth-child(3) {
+      z-index: 1;
+    }
+  }
+
+  .pill .more {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 1.5rem;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      right: 2rem;
+    }
+
+    &::after {
+      right: 4rem;
+    }
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masks for stacked elements</title>
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../../main-style.css">
+  <!-- Tip-specific styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <main>
+    <div class="pill">
+      <img class="badge" src="HNDO_2024_PVProfileImageCircle_256x256_Lucy_LightOrange.png" alt="Random image">
+      <img class="badge" src="HNDO_2024_PVProfileImageCircle_256x256_Max_Red.png" alt="Random image">
+      <img class="badge" src="HNDO_2024_PVProfileImageCircle_256x256_Ghoul_LightBlue.png" alt="Random image">
+      <span class="more"></span>
+    </div>
+  </main>
+</body>
+
+
+<!-- Source
+ https://x.com/brotzky_/status/1884287348206137778 (@brotzky_ on X)
+
+Reference:
+ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+-->
+
+</html>

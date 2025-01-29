@@ -1,0 +1,26 @@
+/*  Usar outline, 
+    pero el color tiene que coincidir 
+    con el background del contenedor
+    (no funciona con background-image)
+    */
+    
+    /* .pill img {
+      box-sizing: border-box;
+      outline: 0.75rem solid #1a1a1a;
+      } */
+      
+/*  Usar shadow, 
+    pero el color tiene que coincidir 
+    con el background del contenedor
+    (no funciona con background-image)
+*/
+
+/* .pill img {
+  box-shadow: 0 0 0 0.75rem #1a1a1a;
+} */
+
+/* Usar mask */
+
+/* .pill img {
+  mask: radial-gradient(circle at 50% 50%, transparent 50%, #1a1a1a 50%);
+} */
