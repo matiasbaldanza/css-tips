@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;wbr&gt; - Word Break Opportunity</title>
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../../main-style.css">
+  <!-- Tip-specific styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    article {
+      max-width: 600px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <main>
+    <article class="container">
+      <h1>&lt;wbr&gt; - Word Break Opportunity</h1>
+      <p>Sin <code>&lt;wbr&gt;</code></p>
+      <p style="width: 150px; border: 1px solid black;">
+        Supercalifragilisticoexpialidoso
+      </p>
+
+      <p>Con <code>&lt;wbr&gt;</code></p>
+      <p style="width: 150px; border: 2px dashed black;">
+        Super<wbr>califragilistico<wbr>expialidoso
+      </p>
+
+      <p>URL con <code>&lt;wbr&gt;</code></p>
+      <p style="width: 200px; border: 1px solid black; word-wrap: break-word;">
+        https://www.ejemplo.com/<wbr>una-url-muy-larga-<wbr>que-no-se-quiebra-bien<wbr>?param1=23<wbr>&amp;param2=570
+      </p>
+    </article>
+  </main>
+</body>
+
+
+<!-- Source
+ https://frontendmasters.com/ (cant' find source)
+ https://caniuse.com/wbr-element
+
+Reference:
+ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr
+-->
+
+</html>
